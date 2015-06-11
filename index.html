@@ -43,7 +43,7 @@
     body {
         width:100%; 
         height:100%; 
-        background-color:rgba(140, 32, 41, 0.7);
+        background-color:rgba(232, 69, 85, 0.7);
     }
 
     .btn-jumbotron {
@@ -56,7 +56,7 @@
     }
 
     .btn-jumbotron:hover {
-        background-color: blue;
+        background-color: #34495E;
         color:white;
     }
 
@@ -89,11 +89,67 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/games.html">Games</a></li>
             <li><a href="/creators.html">Creators</a></li>
-            <li><a href="#join">Join</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Join</span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" data-toggle="modal" data-target="#myModal">Video Creator</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModal2">Game Maker</a></li>
+              </ul>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+
+    <div class="container">
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="container">
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header Dos</h4>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
     
 
     <!-- Full Width Image Header -->
@@ -102,11 +158,11 @@
                 <h1>Drive direct installs to your mobile games<br>
                 through YouTube & Twitch Influencer videos.</h1>
                 <span>
-                    <button class="btn btn-jumbotron">
-                        I have a game
+                    <button class="btn btn-jumbotron" data-toggle="modal" data-target="#myModal2">
+                        I HAVE A GAME
                     </button>
-                    <button class="btn btn-jumbotron">
-                        I make videos
+                    <button class="btn btn-jumbotron" data-toggle="modal" data-target="#myModal">
+                        I MAKE VIDEOS
                     </button>
                 </span>
                 <footer>
@@ -140,7 +196,7 @@
         }).parent().addClass('active');
 
     </script>
-    
+
 </body>
 
 </html>
