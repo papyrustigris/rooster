@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" id="full">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Roostr</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <!-- <link href="css/one-page-wonder.css" rel="stylesheet"> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<style>
+    
+    #navbar {
+        min-height: 75px;
+    }
+
+    #full {
+        background-image: url('images/controller.jpg');
+        background-size:cover;
+        width:100%;
+        height:100%;
+        text-align: center;
+    }
+
+    body {
+        width:100%; 
+        height:100%; 
+        background-color:rgba(140, 32, 41, 0.7);
+    }
+
+    .btn-jumbotron {
+        background: none;
+        border: 2px solid white;
+        border-radius: 24px;
+        font-size: 20px;
+        margin:15px 15px;
+        padding: 10px 40px;
+    }
+
+    .btn-jumbotron:hover {
+        background-color: blue;
+        color:white;
+    }
+
+    footer {
+        position: relative;
+        top:60px;
+        text-align: center;
+    }
+
+</style>
+    
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="" class="img-responsive" />
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/games.html">Games</a></li>
+            <li><a href="/creators.html">Creators</a></li>
+            <li><a href="#join">Join</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+
+    <!-- Full Width Image Header -->
+        <div class="container">
+            <div class="jumbotron" style="background:none; color: white; margin-top:40px;">
+                <h1>Drive direct installs to your mobile games<br>
+                through YouTube & Twitch Influencer videos.</h1>
+                <span>
+                    <button class="btn btn-jumbotron">
+                        I have a game
+                    </button>
+                    <button class="btn btn-jumbotron">
+                        I make videos
+                    </button>
+                </span>
+                <footer>
+                    <p>Copyright &copy; 2015 Roostr Inc. - All Rights Reserved</p>
+                </footer>
+            </div>
+        </div>
+
+
+
+        <!-- Footer -->
+
+
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+
+        var url = window.location;
+        // Will only work if string in href matches with location
+        $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+
+        // Will also work for relative and absolute hrefs
+        $('ul.nav a').filter(function() {
+            return this.href == url;
+        }).parent().addClass('active');
+
+    </script>
+    
+</body>
+
+</html>

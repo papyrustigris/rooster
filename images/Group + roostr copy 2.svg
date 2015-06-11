@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="245px" height="84px" viewBox="0 0 245 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Group + roostr copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M0.00883977901,0.135815668 L79.9758379,0.135815668 L79.9758379,83.6129032 L0.00883977901,83.6129032"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Creator-Sign-Up" sketch:type="MSArtboardGroup" transform="translate(-595.000000, -124.000000)">
+            <g id="Group-Copy-2" sketch:type="MSLayerGroup" transform="translate(-70.000000, -253.000000)">
+                <g id="Group-+-roostr-copy-2" transform="translate(664.000000, 377.000000)">
+                    <g id="Group">
+                        <path d="M45.5001105,17.8741382 L49.1304604,25.8527558 L57.0679926,13.1090876 L45.5001105,17.8741382" id="Fill-1" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                        <mask id="mask-2" sketch:name="Clip 3" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-3"></g>
+                        <path d="M50.6684346,29.6184332 L53.7963904,36.4323687 L61.3757643,29.2136406 L50.6684346,29.6184332" id="Fill-2" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                        <path d="M44.7388582,17.3002028 L43.9646409,6.4196129 L5.09804788,12.9797604 L16.4766114,18.6554101 L1.21841621,42.2177327 L12.7283978,39.1708018 L8.77569061,53.5541382 L13.6266667,50.2438341 L10.6632781,59.1998525 L16.2653407,58.5818249 L17.4298343,68.4298618 L21.319779,66.3498618 L27.5695028,26.7034839 L44.7388582,17.3002028" id="Fill-4" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                        <path d="M54.5069613,37.7936221 L57.9068877,34.8061198 L68.2445672,49.4731797 L61.667919,54.3034101 L54.5069613,37.7936221" id="Fill-6" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                        <path d="M39.9157274,31.02953 L37.4560589,26.540682 L40.8430203,24.7004608 L43.3535175,29.4944147 L39.9157274,31.02953 L39.9157274,31.02953 Z M44.3854144,18.3302488 L28.4459669,27.0845346 L21.4849355,78.2997235 L29.6584899,69.1885714 L33.505267,83.6129032 L42.5526335,66.7696959 L48.9518969,77.2925346 L53.0872928,66.4850876 L56.2771271,74.2952995 L59.8326335,67.0736221 L67.9927808,72.9467281 L44.3854144,18.3302488 L44.3854144,18.3302488 Z" id="Fill-7" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                        <path d="M65.587035,18.6211982 C64.4738122,15.8952995 62.5639779,13.6511705 60.0651197,12.1178249 L58.9878453,15.1152074 C60.6565009,16.2821014 61.9409208,17.8849032 62.7207366,19.7941382 C63.5008471,21.7038157 63.7041621,23.7357419 63.3343646,25.730212 L66.2005157,27.0927926 C66.9007735,24.2607189 66.6993738,21.3445899 65.587035,18.6211982" id="Fill-8" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                        <path d="M72.1526335,16.1515945 C70.2856722,11.5806083 66.6758011,8.11089401 62.1131492,6.4196129 L61.0651934,9.33529954 C64.8011786,10.7306175 67.7560221,13.5778802 69.2863352,17.3245346 C70.7500552,20.9088295 70.6903867,24.9521843 69.1434254,28.4917972 L71.9404788,29.8214931 C73.8594475,25.4957419 73.9451934,20.5407558 72.1526335,16.1515945" id="Fill-9" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                        <path d="M75.504825,13.9493456 C77.7691344,19.4934562 77.1966114,25.7970138 74.081768,30.8395945 L76.8956169,32.1772535 C80.3690608,26.3485346 80.9675138,19.1336406 78.3711234,12.7764055 C75.8316022,6.55882028 70.6559116,1.97441475 64.3715654,0.135815668 L63.3203683,3.06094009 C68.7898343,4.60269124 73.3031308,8.55904147 75.504825,13.9493456" id="Fill-11" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                    </g>
+                    <text id="roostr-copy-2" sketch:type="MSTextLayer" font-family="San Francisco Display" font-size="53.2611339" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="100" y="67">roostr</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
