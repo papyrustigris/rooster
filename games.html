@@ -32,6 +32,10 @@
         min-height: 75px;
     }
 
+     .navbar-right {
+        padding: 15px 5px;
+    }
+
     .header-image {
         background-image: url('images/controller.jpg');
         background-size:cover;
@@ -61,16 +65,34 @@
         color:white;
     }
 
-    #about, #contact {
-        background-color: #FAFAFA;
+    .modal-content {
+        background: url('/images/sign_up_box.png');
         text-align: center;
-        padding:15px 30px;
     }
 
-    #services {
+    #wrapper {
         text-align: center;
-        padding:15px 30px;  
     }
+
+        #about, #contact {
+            background-color: #FAFAFA;
+            text-align: center;
+            padding:15px 30px;
+        }
+
+        #services {
+            text-align: center;
+            padding:15px 30px;  
+        }
+
+            .featurette-img {
+                padding:15px 5px;
+                max-height:250px;
+            }
+                
+            .lead {
+                padding:30px 30px;
+            }
 
     footer {
         position: relative;
@@ -122,45 +144,83 @@
         
           <!-- Modal content-->
           <div class="modal-content">
+
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Modal Header</h4>
+              <span>
+                <img src="/images/white_corner_roostr.png" alt="" height="42px" width="50px" />  
+                <p style="color:white;">roostr</p>
+              </span>
             </div>
+
             <div class="modal-body">
-              <p>Some text in the modal.</p>
+
+              <form role="form">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="full_name" placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="company" placeholder="Company">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="email" placeholder="Email">
+                </div>
+              </form>
+
             </div>
+
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Sign Up</button>
             </div>
-          </div>
+
+          </div> <!-- end Modal content -->
           
         </div>
-      </div>
+      </div> <!-- End Modal -->
       
     </div>
 
     <div class="container">
 
-      <!-- Modal -->
+     <!-- Modal -->
       <div class="modal fade" id="myModal2" role="dialog">
         <div class="modal-dialog">
         
           <!-- Modal content-->
           <div class="modal-content">
+
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Modal Header Dos</h4>
+              <span>
+                <img src="/images/white_corner_roostr.png" alt="" height="42px" width="50px" />  
+                <p style="color:white;">roostr</p>
+              </span>
             </div>
+
             <div class="modal-body">
-              <p>Some text in the modal.</p>
+
+              <form role="form">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="full_name2" placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="channel_URL" placeholder="Channel URL">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="email2" placeholder="Email">
+                </div>
+              </form>
+
             </div>
+
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Sign Up</button>
             </div>
-          </div>
+
+          </div> <!-- end Modal content -->
           
         </div>
-      </div>
+      </div> <!-- End Modal -->
       
     </div>
 
@@ -191,14 +251,14 @@
 
 <!-- Page content -->
 
-<div class="container">
 
+    <div id="wrapper">
         <!-- First Featurette -->
         <div class="featurette" id="about">
-            <div class="col-sm-3">
-                <img class="featurette-img img-responsive pull-left" src="images/sign_up_w_txt.png" style="max-height:350px;" />
+            <div class="col-sm-6">
+                <img class="featurette-img" src="images/sign_up_w_txt.png" />
             </div>
-            <div class="col-sm-9">
+            <div class="col-sm-6">
                 <p class="lead">You choose the<br>
                     games and produce<br>
                     native creative content<br>
@@ -210,7 +270,7 @@
 
         <!-- Second Featurette -->
         <div class="featurette" id="services">
-            <div class="col-sm-9">
+            <div class="col-sm-6">
                 <p class="lead">We give you an install<br>
                     link to place within<br>
                     your video description<br>
@@ -218,17 +278,17 @@
                     social account.
                 </p>
             </div>
-            <div class="col-sm-3">
-                <img class="featurette-img img-responsive pull-right" src="images/connect_with_creators_w_txt.png" style="max-height:350px;"  />
+            <div class="col-sm-6">
+                <img class="featurette-img" src="images/connect_with_creators_w_txt.png" />
             </div>
         </div>
 
         <!-- Third Featurette -->
         <div class="featurette" id="contact">
-            <div class="col-sm-3">
-                <img class="featurette-img img-responsive pull-left" src="images/Drive_installs_w_txt.png" style="max-height:350px;"  />
+            <div class="col-sm-6">
+                <img class="featurette-img" src="images/Drive_installs_w_txt.png" />
             </div>
-            <div class="col-sm-9">
+            <div class="col-sm-6">
                 <p class="lead">You get paid by Roostr<br>
                     for each person who<br>
                     clicks on that link and<br>
@@ -236,26 +296,32 @@
                 </p>
             </div>
         </div>
-
     </div>
+
+
     <!-- /.container -->
 
     <!-- Footer -->
     <footer>
         <div style="padding:0; margin:0; background-color:#E84555; width:100%; text-align:center;">
-            <h2 style="margin:0; padding-top:30px; padding-bottom:30px; color:white;">
+            <h2 style="margin:0; padding-top:80px; padding-bottom:30px; color:white;">
                 Discover and hire YouTube and Twitch<br>
                 Influencers to make native content<br>
                 that brings engaged, loyal players<br>
                 directly to your game.
             </h2>
-            <button class="btn btn-jumbotron">
-                JOIN THE ROOST
-            </button>
-            <span>  
-                <p style="font-size: 16px; margin:0; padding-bottom: 20px; color:white;">Copyright &copy; 2015 Roostr Inc. - All Rights Reserved</p>
-                <img class="img-responsive" src="images/white_corner_roostr.png"></img>
-            </span>
+            <div class="row">
+                <div class="col-sm-2">
+                    <img class="img-responsive" src="images/white_corner_roostr.png" />
+                </div>
+                <div class="col-sm-8">
+                    <button class="btn btn-jumbotron">
+                        JOIN THE ROOST
+                    </button>
+                    <p style="font-size: 16px; margin:0; padding-bottom: 20px; color:white;">Copyright &copy; 2015 Roostr Inc. - All Rights Reserved</p>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
         </div>
     </footer>
 
