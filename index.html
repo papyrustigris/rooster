@@ -14,6 +14,8 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="css/app.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <!-- <link href="css/one-page-wonder.css" rel="stylesheet"> -->
 
@@ -27,6 +29,13 @@
 </head>
 
 <style>
+    
+    body {
+        /*background-color:rgba(232, 69, 85, 0.7);
+        background-size:cover;*/
+        font-family: 'Open Sans';
+        text-align: center;    
+    }
 
     .top-section {
         background-color: #3498DB;
@@ -71,11 +80,6 @@
         padding: 15px 5px;
     }
 
-    body {
-        /*background-color:rgba(232, 69, 85, 0.7);
-        background-size:cover;*/
-        text-align: center;    
-    }
 
     .btn-jumbotron {
         background: none;
@@ -84,6 +88,7 @@
         font-size: 20px;
         margin:15px 15px;
         padding: 10px 40px;
+        color: white;
     }
 
 
@@ -103,9 +108,8 @@
     }
 
         #form-wrapper {
-            background-color: white;
-            border: none;
-            border-radius: 8px;
+            background: url('/images/sign_up_white_box.png');
+            background-size: cover;
         }
 
         .form-group {
@@ -137,9 +141,15 @@
             }
 
     footer {
-        position: relative;
-        top:60px;
+        position: fixed;
+        bottom: 10px;
         text-align: center;
+        left: 20%;
+        right: 20%;
+    }
+
+    .navbar-brand>img {
+        margin-top: -48px;
     }
 
 </style>
@@ -153,7 +163,7 @@
                               width: 100%;">
 
     <div class="top-section">
-        <video id="bgVideo" autoplay>
+        <video id="bgVideo" autoplay loop>
             <source src="images/vid-bkgrnd.mp4" type="video/mp4"/>
         </video>
     </div>
@@ -170,16 +180,16 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">
-            <img src="images/logo.png" alt="" class="img-responsive" />
+            <img src="images/roostr_logo_nav.svg" alt="" class="img-responsive" />
           </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/games.html">Games</a></li>
-            <li><a href="/creators.html">Creators</a></li>
+            <li><a href="/games.html">GAMES</a></li>
+            <li><a href="/creators.html">CREATORS</a></li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Join</span></a>
-              <ul class="dropdown-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">JOIN</span></a>
+              <ul class="dropdown-menu"><br>
                 <li><a href="#" data-toggle="modal" data-target="#myModal">Video Creator</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#myModal2">Game Maker</a></li>
               </ul>
@@ -199,24 +209,29 @@
           <div class="modal-content">
 
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <span>
                 <img src="/images/white_corner_roostr.png" alt="" height="42px" width="50px" />  
-                <p style="color:white;">roostr</p>
-              </span>
+                <p style="color: white;
+                          display: inline;
+                          font-family: 'Chunk Five';
+                          font-size: 36px;
+                          position: relative;
+                          top: 16px;">roostr</p><button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
             <div class="modal-body">
                 <div id="form-wrapper">
-                  <form role="form" action="form-to-email_C.php" method="post">
-                    <div class="form-group" style="padding-top:15px;">
-                      <input type="text" class="form-control" name="full_name_C" placeholder="Full Name">
+                  <form class="form form-inline form-horizontal" role="form" action="form-to-email_C.php" method="post">
+                    <div class="form-group col-xs-12" style="padding-top:15px;">
+                       <img src="/images/icon_name.png" alt="" id="formlabels" class="col-xs-2" />  
+                       <input type="text" class="form-control col-xs-10" name="full_name_C" placeholder="Full Name" >
                     </div>
-                    <div class="form-group">
-                      <input type="text" class="form-control" name="channel_URL_C" placeholder="Channel URL">
+                    <div class="form-group col-xs-12">
+                      <img src="/images/icon_video.png" alt="" id="formlabels" class="col-xs-2" />  
+                      <input type="text" class="form-control col-xs-10" name="channel_URL_C" placeholder="Channel URL">
                     </div>
-                    <div class="form-group">
-                      <input type="text" class="form-control" name="email_C" placeholder="Email">
+                    <div class="form-group col-xs-12">
+                      <img src="/images/icon_email.png" alt="" id="formlabels" class="col-xs-2" />  
+                      <input type="text" class="form-control col-xs-10" name="email_C" placeholder="Email">
                     </div>
                     <div class="form-submit-btn">
                         <input type="submit" name='submit' value="Sign Up" class="btn btn-modal" />
@@ -245,24 +260,30 @@
           <div class="modal-content">
 
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <span>
                 <img src="/images/white_corner_roostr.png" alt="" height="42px" width="50px" />  
-                <p style="color:white;">roostr</p>
-              </span>
+                <p style="color: white;
+                          display: inline;
+                          font-family: 'Chunk Five';
+                          font-size: 36px;
+                          position: relative;
+                          top: 16px;">roostr</p>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
             <div class="modal-body">
                 <div id="form-wrapper">
-                  <form role="form" action="form-to-email_G.php" method="post">
-                    <div class="form-group" style="padding-top:15px;">
-                      <input type="text" class="form-control" name="full_name_G" placeholder="Full Name">
+                  <form class="form form-inline form-horizontal" role="form" action="form-to-email_C.php" method="post">
+                    <div class="form-group col-xs-12" style="padding-top:15px;">
+                       <img src="/images/icon_name.png" alt="" id="formlabels" class="col-xs-2" />  
+                       <input type="text" class="form-control col-xs-10" name="full_name_G" placeholder="Full Name" >
                     </div>
-                    <div class="form-group">
-                      <input type="text" class="form-control" name="company_G" placeholder="Company">
+                    <div class="form-group col-xs-12">
+                      <img src="/images/icon_company.png" alt="" id="formlabels" class="col-xs-2" />  
+                      <input type="text" class="form-control col-xs-10" name="company_G" placeholder="Company">
                     </div>
-                    <div class="form-group">
-                      <input type="text" class="form-control" name="email_G" placeholder="Email">
+                    <div class="form-group col-xs-12">
+                      <img src="/images/icon_email.png" alt="" id="formlabels" class="col-xs-2" />  
+                      <input type="text" class="form-control col-xs-10" name="email_G" placeholder="Email">
                     </div>
                     <div class="form-submit-btn">
                         <input type="submit" name='submit' value="Sign Up" class="btn btn-modal" />
@@ -280,24 +301,23 @@
       </div> <!-- End Modal -->
       
     </div>
-    
             
 
     <!-- Full Width Image Header -->
         <div class="container">
             <div class="jumbotron" style="background:none; color: white; margin-top:40px;">
-                <h1 style="font-size:36px; margin-top:150px;">Drive direct installs to your mobile games<br>
-                through YouTube & Twitch Influencer videos.</h1>
+                <h1>Drive direct installs to your mobile games<br>
+                through <span style="border-bottom:5px solid #FF332F">YouTube</span> & <span style="border-bottom:5px solid #8E62D7">Twitch</span> Influencer videos.</h1>
                 <span>
-                    <button class="btn btn-jumbotron" data-toggle="modal" data-target="#myModal2">
+                    <a href="/games.html" class="btn btn-jumbotron">
                         I HAVE A GAME
-                    </button>
-                    <button class="btn btn-jumbotron" data-toggle="modal" data-target="#myModal">
+                    </a>
+                    <a href="/creators.html" class="btn btn-jumbotron">
                         I MAKE VIDEOS
-                    </button>
+                    </a>
                 </span>
                 <footer>
-                    <p>Copyright &copy; 2015 Roostr Inc. - All Rights Reserved</p>
+                    <p style="font-size:16px">Copyright &copy; 2015 Roostr Inc. - All Rights Reserved</p>
                 </footer>
             </div>
         </div>
@@ -326,6 +346,17 @@
         $('ul.nav a').filter(function() {
             return this.href == url;
         }).parent().addClass('active');
+
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-64033540-1', 'auto');
+      ga('send', 'pageview');
 
     </script>
 

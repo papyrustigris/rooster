@@ -17,6 +17,9 @@
     <!-- Custom CSS -->
     <link href="css/one-page-wonder.css" rel="stylesheet">
 
+    <!-- Custom CSS -->
+    <link href="css/app.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,6 +29,12 @@
 
     <style>
         
+        body {
+            /*background-color:rgba(232, 69, 85, 0.7);
+            background-size:cover;*/
+            font-family: 'Open Sans';
+        }
+
         #navbar {
             min-height: 75px;
         }
@@ -45,7 +54,7 @@
         .header-img-overlay {
             width:100%; 
             height:100%; 
-            background-color:rgba(232, 69, 85, 0.7);
+            background-color:rgba(226, 69, 102, 0.7);
         }
 
         .btn-jumbotron {
@@ -68,6 +77,43 @@
             background-size: cover;
             text-align: center;
         }
+
+        .modal-body {
+            padding:20px;
+        }
+
+            #form-wrapper {
+                background: url('/images/sign_up_white_box.png');
+                background-size: cover;
+            }
+
+            .form-group {
+                margin:0;
+            }
+
+            .form-control {
+                border: none;
+                height: 50px;
+            }
+
+            .form-submit-btn {
+                background-color: white;
+                margin: 5px 15px;
+            }
+                
+                .btn-modal {
+                    background: #34495E;
+                    border: 2px solid #34495E;
+                    color:white;
+                    border-radius: 24px;
+                    font-size: 20px;
+                    margin:15px 15px;
+                    padding: 10px 100px;
+                }
+
+                input {
+                    border-radius:0;
+                }
 
         #wrapper {
             text-align: center;
@@ -123,11 +169,11 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/games.html">Games</a></li>
-            <li><a href="/creators.html">Creators</a></li>
+            <li><a href="/games.html">GAMES</a></li>
+            <li><a href="/creators.html">CREATORS</a></li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Join</span></a>
-              <ul class="dropdown-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">JOIN</span></a>
+              <ul class="dropdown-menu"><br>
                 <li><a href="#" data-toggle="modal" data-target="#myModal">Video Creator</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#myModal2">Game Maker</a></li>
               </ul>
@@ -147,28 +193,35 @@
           <div class="modal-content">
 
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <span>
                 <img src="/images/white_corner_roostr.png" alt="" height="42px" width="50px" />  
-                <p style="color:white;">roostr</p>
-              </span>
+                <p style="color: white;
+                          display: inline;
+                          font-family: 'Chunk Five';
+                          font-size: 36px;
+                          position: relative;
+                          top: 16px;">roostr</p><button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
             <div class="modal-body">
-
-              <form role="form" action="form-to-email_C.php" method="post">
-                <div class="form-group">
-                  <input type="text" class="form-control" name="full_name_C" placeholder="Full Name">
+                <div id="form-wrapper">
+                  <form class="form form-inline form-horizontal" role="form" action="form-to-email_C.php" method="post">
+                    <div class="form-group col-xs-12" style="padding-top:15px;">
+                       <img src="/images/icon_name.png" alt="" id="formlabels" class="col-xs-2" />  
+                       <input type="text" class="form-control col-xs-10" name="full_name_C" placeholder="Full Name" >
+                    </div>
+                    <div class="form-group col-xs-12">
+                      <img src="/images/icon_video.png" alt="" id="formlabels" class="col-xs-2" />  
+                      <input type="text" class="form-control col-xs-10" name="channel_URL_C" placeholder="Channel URL">
+                    </div>
+                    <div class="form-group col-xs-12">
+                      <img src="/images/icon_email.png" alt="" id="formlabels" class="col-xs-2" />  
+                      <input type="text" class="form-control col-xs-10" name="email_C" placeholder="Email">
+                    </div>
+                    <div class="form-submit-btn">
+                        <input type="submit" name='submit' value="Sign Up" class="btn btn-modal" />
+                    </div>
+                  </form>
                 </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="channel_URL_C" placeholder="Channel URL">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="email_C" placeholder="Email">
-                </div>
-                <input type="submit" name='submit' value="Sign Up" class="btn btn-jumbotron" />
-              </form>
-
             </div>
 
             <div class="modal-footer">
@@ -191,28 +244,36 @@
           <div class="modal-content">
 
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <span>
                 <img src="/images/white_corner_roostr.png" alt="" height="42px" width="50px" />  
-                <p style="color:white;">roostr</p>
-              </span>
+                <p style="color: white;
+                          display: inline;
+                          font-family: 'Chunk Five';
+                          font-size: 36px;
+                          position: relative;
+                          top: 16px;">roostr</p>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
             <div class="modal-body">
-
-              <form role="form" action="form-to-email_G.php" method="post">
-                <div class="form-group">
-                  <input type="text" class="form-control" name="full_name_G" placeholder="Full Name">
+                <div id="form-wrapper">
+                  <form class="form form-inline form-horizontal" role="form" action="form-to-email_C.php" method="post">
+                    <div class="form-group col-xs-12" style="padding-top:15px;">
+                       <img src="/images/icon_name.png" alt="" id="formlabels" class="col-xs-2" />  
+                       <input type="text" class="form-control col-xs-10" name="full_name_G" placeholder="Full Name" >
+                    </div>
+                    <div class="form-group col-xs-12">
+                      <img src="/images/icon_company.png" alt="" id="formlabels" class="col-xs-2" />  
+                      <input type="text" class="form-control col-xs-10" name="company_G" placeholder="Company">
+                    </div>
+                    <div class="form-group col-xs-12">
+                      <img src="/images/icon_email.png" alt="" id="formlabels" class="col-xs-2" />  
+                      <input type="text" class="form-control col-xs-10" name="email_G" placeholder="Email">
+                    </div>
+                    <div class="form-submit-btn">
+                        <input type="submit" name='submit' value="Sign Up" class="btn btn-modal" />
+                    </div>
+                  </form>
                 </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="company_G" placeholder="Company">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="email_G" placeholder="Email">
-                </div>
-                <input type="submit" name='submit' value="Sign Up" class="btn btn-jumbotron" />
-              </form>
-
             </div>
 
             <div class="modal-footer">
@@ -230,14 +291,14 @@
         <div class="header-img-overlay">
             <div class="container">
                 <div class="jumbotron" style="background:none; color: white; margin-top:40px;">
-                    <p style="font-size:36px; margin-top:20px;">What is <b>roostr</b>?</p>
+                    <p style="font-size:36px; margin-top:20px;">What is <span style="font-family:'Chunk Five'">roostr</span>?</p>
                     <h3>Roostr is a new way to drive direct installs<br>
                         to your mobile games through YouTube<br>
                         and Twitch Influencer videos.</h3>
 
-                    <button class="btn btn-jumbotron">
+                    <a class="btn btn-jumbotron" href="#" data-toggle="modal" data-target="#myModal2">
                     JOIN THE ROOST
-                    </button>
+                    </a>
                     <br>
                     <img src="images/arrow_down.png" alt="">
 
@@ -317,9 +378,9 @@
                         <img class="img-responsive" src="images/white_corner_roostr.png" />
                     </div>
                     <div class="col-sm-8">
-                        <button class="btn btn-jumbotron">
+                        <a class="btn btn-jumbotron" href="#" data-toggle="modal" data-target="#myModal2">
                             JOIN THE ROOST
-                        </button>
+                        </a>
                         <p style="font-size: 16px; margin:0; padding-bottom: 20px; color:white;">Copyright &copy; 2015 Roostr Inc. - All Rights Reserved</p>
                     </div>
                     <div class="col-sm-2"></div>
@@ -349,6 +410,17 @@
         $('ul.nav a').filter(function() {
             return this.href == url;
         }).parent().addClass('active');
+
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-64033540-1', 'auto');
+      ga('send', 'pageview');
 
     </script>
 
