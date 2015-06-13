@@ -67,6 +67,7 @@
 
     .modal-content {
         background: url('/images/sign_up_box.png');
+        background-size: cover;
         text-align: center;
     }
 
@@ -155,22 +156,22 @@
 
             <div class="modal-body">
 
-              <form role="form">
+              <form role="form" action="form-to-email_C.php" method="post">
                 <div class="form-group">
-                  <input type="text" class="form-control" id="full_name" placeholder="Full Name">
+                  <input type="text" class="form-control" name="full_name_C" placeholder="Full Name">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="company" placeholder="Company">
+                  <input type="text" class="form-control" name="channel_URL_C" placeholder="Channel URL">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="email" placeholder="Email">
+                  <input type="text" class="form-control" name="email_C" placeholder="Email">
                 </div>
+                <input type="submit" name='submit' value="Sign Up" class="btn btn-jumbotron" />
               </form>
 
             </div>
 
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Sign Up</button>
             </div>
 
           </div> <!-- end Modal content -->
@@ -199,22 +200,22 @@
 
             <div class="modal-body">
 
-              <form role="form">
+              <form role="form" action="form-to-email_G.php" method="post">
                 <div class="form-group">
-                  <input type="text" class="form-control" id="full_name2" placeholder="Full Name">
+                  <input type="text" class="form-control" name="full_name_G" placeholder="Full Name">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="channel_URL" placeholder="Channel URL">
+                  <input type="text" class="form-control" name="company_G" placeholder="Company">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="email2" placeholder="Email">
+                  <input type="text" class="form-control" name="email_G" placeholder="Email">
                 </div>
+                <input type="submit" name='submit' value="Sign Up" class="btn btn-jumbotron" />
               </form>
 
             </div>
 
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Sign Up</button>
             </div>
 
           </div> <!-- end Modal content -->
@@ -309,17 +310,19 @@
                 that brings engaged, loyal players<br>
                 directly to your game.
             </h3>
-            <div class="row">
-                <div class="col-sm-2">
-                    <img class="img-responsive" src="images/white_corner_roostr.png" />
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <img class="img-responsive" src="images/white_corner_roostr.png" />
+                    </div>
+                    <div class="col-sm-8">
+                        <button class="btn btn-jumbotron">
+                            JOIN THE ROOST
+                        </button>
+                        <p style="font-size: 16px; margin:0; padding-bottom: 20px; color:white;">Copyright &copy; 2015 Roostr Inc. - All Rights Reserved</p>
+                    </div>
+                    <div class="col-sm-2"></div>
                 </div>
-                <div class="col-sm-8">
-                    <button class="btn btn-jumbotron">
-                        JOIN THE ROOST
-                    </button>
-                    <p style="font-size: 16px; margin:0; padding-bottom: 20px; color:white;">Copyright &copy; 2015 Roostr Inc. - All Rights Reserved</p>
-                </div>
-                <div class="col-sm-2"></div>
             </div>
         </div>
     </footer>

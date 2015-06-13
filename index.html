@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="full">
+<html lang="en">
 
 <head>
 
@@ -27,7 +27,42 @@
 </head>
 
 <style>
-    
+
+    .top-section {
+        background-color: #3498DB;
+        background-repeat: repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        overflow:hidden;
+        z-index: -1;
+    }
+
+        #bgVideo { 
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+            @media (min-aspect-ratio: 16/9) {
+              #bgVideo {
+                top: -100%;
+                height: 300%;
+              }
+            }
+             
+            @media (max-aspect-ratio: 16/9) {
+              #bgVideo {
+                width: 300%;
+                left: -100%;
+              }
+            }
+
     #navbar {
         min-height: 75px;
     }
@@ -36,18 +71,10 @@
         padding: 15px 5px;
     }
 
-    #full {
-        background-image: url('images/controller.jpg');
-        background-size:cover;
-        width:100%;
-        height:100%;
-        text-align: center;
-    }
-
     body {
-        width:100%; 
-        height:100%; 
-        background-color:rgba(232, 69, 85, 0.7);
+        /*background-color:rgba(232, 69, 85, 0.7);
+        background-size:cover;*/
+        text-align: center;    
     }
 
     .btn-jumbotron {
@@ -59,6 +86,7 @@
         padding: 10px 40px;
     }
 
+
     .btn-jumbotron:hover {
         background-color: #34495E;
         color:white;
@@ -66,8 +94,47 @@
 
     .modal-content {
         background: url('/images/sign_up_box.png');
+        background-size: cover;
         text-align: center;
     }
+
+    .modal-body {
+        padding:20px;
+    }
+
+        #form-wrapper {
+            background-color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin:0;
+        }
+
+        .form-control {
+            border: none;
+            height: 50px;
+        }
+
+        .form-submit-btn {
+            background-color: white;
+            margin: 5px 15px;
+        }
+            
+            .btn-modal {
+                background: #34495E;
+                border: 2px solid #34495E;
+                color:white;
+                border-radius: 24px;
+                font-size: 20px;
+                margin:15px 15px;
+                padding: 10px 100px;
+            }
+
+            input {
+                border-radius:0;
+            }
 
     footer {
         position: relative;
@@ -79,6 +146,18 @@
     
 <body>
 
+<div class="overlay" style="background: url('images/Red_Overlay.png');
+                              background-size: 100%;
+                              position: absolute;
+                              height: 100%;
+                              width: 100%;">
+
+    <div class="top-section">
+        <video id="bgVideo" autoplay>
+            <source src="images/vid-bkgrnd.mp4" type="video/mp4"/>
+        </video>
+    </div>
+    
     <!-- Navigation -->
 
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -128,23 +207,25 @@
             </div>
 
             <div class="modal-body">
-
-              <form role="form">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="full_name" placeholder="Full Name">
+                <div id="form-wrapper">
+                  <form role="form" action="form-to-email_C.php" method="post">
+                    <div class="form-group" style="padding-top:15px;">
+                      <input type="text" class="form-control" name="full_name_C" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="channel_URL_C" placeholder="Channel URL">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="email_C" placeholder="Email">
+                    </div>
+                    <div class="form-submit-btn">
+                        <input type="submit" name='submit' value="Sign Up" class="btn btn-modal" />
+                    </div>
+                  </form>
                 </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" id="company" placeholder="Company">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" id="email" placeholder="Email">
-                </div>
-              </form>
-
             </div>
 
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Sign Up</button>
             </div>
 
           </div> <!-- end Modal content -->
@@ -172,23 +253,25 @@
             </div>
 
             <div class="modal-body">
-
-              <form role="form">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="full_name2" placeholder="Full Name">
+                <div id="form-wrapper">
+                  <form role="form" action="form-to-email_G.php" method="post">
+                    <div class="form-group" style="padding-top:15px;">
+                      <input type="text" class="form-control" name="full_name_G" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="company_G" placeholder="Company">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="email_G" placeholder="Email">
+                    </div>
+                    <div class="form-submit-btn">
+                        <input type="submit" name='submit' value="Sign Up" class="btn btn-modal" />
+                    </div>
+                  </form>
                 </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" id="channel_URL" placeholder="Channel URL">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" id="email2" placeholder="Email">
-                </div>
-              </form>
-
             </div>
 
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Sign Up</button>
             </div>
 
           </div> <!-- end Modal content -->
@@ -198,6 +281,7 @@
       
     </div>
     
+            
 
     <!-- Full Width Image Header -->
         <div class="container">
@@ -218,6 +302,7 @@
             </div>
         </div>
 
+</div>
 
 
         <!-- Footer -->
