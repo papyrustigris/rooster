@@ -143,10 +143,9 @@
             }
 
     footer {
-        position: relative;
-        top:60px;
         text-align: center;
         margin:0;
+        margin-top:-20px;
     }
 
 </style>
@@ -165,7 +164,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="/">
-            <img src="images/logo.png" alt="" class="img-responsive" />
+            <img src="images/roostr_logo_nav.png" alt="" class="img-responsive" style="max-width:180px;" />
           </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -194,29 +193,24 @@
           <div class="modal-content">
 
             <div class="modal-header">
-                <img src="/images/white_corner_roostr.png" alt="" height="42px" width="50px" />  
-                <p style="color: white;
-                          display: inline;
-                          font-family: 'Chunk Five';
-                          font-size: 36px;
-                          position: relative;
-                          top: 16px;">roostr</p><button type="button" class="close" data-dismiss="modal">&times;</button>
+                <a class="close" data-dismiss="modal">&times;</a>
+                <img src="/images/roostr_logo_white.png" alt="" style="margin-top:30px; max-width:250px;" />
             </div>
 
             <div class="modal-body">
                 <div id="form-wrapper">
-                  <form class="form form-inline form-horizontal" role="form" action="form-to-email_C.php" method="post">
+                  <form class="form form-inline form-horizontal" role="form" data-toggle="validator">
                     <div class="form-group col-xs-12" style="padding-top:15px;">
                        <img src="/images/icon_name.png" alt="" id="formlabels" class="col-xs-2" />  
-                       <input type="text" class="form-control col-xs-10" name="full_name_C" placeholder="Full Name" >
+                       <input type="text" class="form-control col-xs-10" name="full_name_C" placeholder="Full Name" required>
                     </div>
                     <div class="form-group col-xs-12">
                       <img src="/images/icon_video.png" alt="" id="formlabels" class="col-xs-2" />  
-                      <input type="text" class="form-control col-xs-10" name="channel_URL_C" placeholder="Channel URL">
+                      <input type="url" class="form-control col-xs-10" name="channel_URL_C" placeholder="Channel URL" required>
                     </div>
                     <div class="form-group col-xs-12">
                       <img src="/images/icon_email.png" alt="" id="formlabels" class="col-xs-2" />  
-                      <input type="text" class="form-control col-xs-10" name="email_C" placeholder="Email">
+                      <input type="email" class="form-control col-xs-10" name="email_C" placeholder="Email" required>
                     </div>
                     <div class="form-submit-btn">
                         <input type="submit" name='submit' value="Sign Up" class="btn btn-modal" />
@@ -245,30 +239,24 @@
           <div class="modal-content">
 
             <div class="modal-header">
-                <img src="/images/white_corner_roostr.png" alt="" height="42px" width="50px" />  
-                <p style="color: white;
-                          display: inline;
-                          font-family: 'Chunk Five';
-                          font-size: 36px;
-                          position: relative;
-                          top: 16px;">roostr</p>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <a class="close" data-dismiss="modal">&times;</a>
+                <img src="/images/roostr_logo_white.png" alt="" style="margin-top:30px; max-width:250px;" />
             </div>
 
             <div class="modal-body">
                 <div id="form-wrapper">
-                  <form class="form form-inline form-horizontal" role="form" action="form-to-email_C.php" method="post">
+                  <form class="form form-inline form-horizontal" role="form" data-toggle="validator">
                     <div class="form-group col-xs-12" style="padding-top:15px;">
                        <img src="/images/icon_name.png" alt="" id="formlabels" class="col-xs-2" />  
-                       <input type="text" class="form-control col-xs-10" name="full_name_G" placeholder="Full Name" >
+                       <input type="text" class="form-control col-xs-10" name="full_name_G" placeholder="Full Name" required>
                     </div>
                     <div class="form-group col-xs-12">
                       <img src="/images/icon_company.png" alt="" id="formlabels" class="col-xs-2" />  
-                      <input type="text" class="form-control col-xs-10" name="company_G" placeholder="Company">
+                      <input type="text" class="form-control col-xs-10" name="company_G" placeholder="Company" required>
                     </div>
                     <div class="form-group col-xs-12">
                       <img src="/images/icon_email.png" alt="" id="formlabels" class="col-xs-2" />  
-                      <input type="text" class="form-control col-xs-10" name="email_G" placeholder="Email">
+                      <input type="email" class="form-control col-xs-10" name="email_G" placeholder="Email" required>
                     </div>
                     <div class="form-submit-btn">
                         <input type="submit" name='submit' value="Sign Up" class="btn btn-modal" />
@@ -309,7 +297,10 @@
     </div>
 
     <div style="padding:0; margin:0; background-color:#E84555; width:100%; text-align:center;">
-        <h2 style="margin:0; padding-top:30px; padding-bottom:30px; color:white;">HOW ROOSTR WORKS</h2>
+        <h2 style="margin:0; 
+        			padding-top:30px; 
+        			padding-bottom:30px; 
+        			color:white;">HOW ROOSTR WORKS</h2>
     </div>
 
 
@@ -322,10 +313,9 @@
             	<img class="featurette-img" src="images/Choose_a_game_w_txt.png" style="max-height:250px;" />
         	</div>
 			<div class="col-sm-6">
-            	<p class="lead">You choose the<br>
-            		games and produce<br>
-            		native creative content<br>
-            		tailored to your<br>
+            	<p class="lead">
+            		You choose the games and produce
+            		native creative content tailored to your
             		audience.
             	</p>
 			</div>
@@ -333,17 +323,16 @@
 
         <!-- Second Featurette -->
         <div class="featurette" id="services">
-			<div class="col-sm-6">
-            	<p class="lead">We give you an install<br>
-	            	link to place within<br>
-	            	your video description<br>
-	            	or any associated<br>
+        	<div class="col-sm-6 col-sm-push-6">
+            	<img class="featurette-img" src="images/Create_and_share_w_txt.png" style="max-height:250px;"  />
+        	</div>
+			<div class="col-sm-6 col-sm-pull-6">
+            	<p class="lead">
+            		We give you an install link to place within
+	            	your video description or any associated
 	            	social account.
             	</p>
 			</div>
-        	<div class="col-sm-6">
-            	<img class="featurette-img" src="images/Create_and_share_w_txt.png" style="max-height:250px;"  />
-        	</div>
         </div>
 
         <!-- Third Featurette -->
@@ -352,10 +341,9 @@
             	<img class="featurette-img" src="images/Get_paid_w_txt.png" style="max-height:250px;"  />
         	</div>
 			<div class="col-sm-6">
-            	<p class="lead">You get paid by Roostr<br>
-	            	for each person who<br>
-	            	clicks on that link and<br>
-	            	installs the game.
+            	<p class="lead">
+            		You get paid by Roostr for each person who
+            		clicks on that link and installs the game.
             	</p>
 			</div>
         </div>
@@ -366,12 +354,10 @@
     <!-- Footer -->
     <footer>
         <div style="padding:0; margin:0; background-color:#E84555; width:100%; text-align:center;">
-        	<h1 style="padding-top:80px; color:white;">Cool, how do I find out more?</h1>
+        	<h1 style="padding-top:40px; color:white;">Cool, how do I find out more?</h1>
             <h3 style="margin:0; padding-top:30px; padding-bottom:30px; color:white;">
-                Discover and hire YouTube and Twitch<br>
-                Influencers to make native content<br>
-                that brings engaged, loyal players<br>
-                directly to your game.
+                Join Roostr and become one of the top marketers<br>
+                for mobile games.
             </h3>
             <div class="container">
                 <div class="row">
@@ -382,7 +368,7 @@
                         <a class="btn btn-jumbotron" href="#" data-toggle="modal" data-target="#myModal">
                             JOIN THE ROOST
                         </a>
-                        <p style="font-size: 16px; margin:0; padding-bottom: 20px; color:white;">Copyright &copy; 2015 Roostr Inc. - All Rights Reserved</p>
+                        <p style="font-size: 16px; margin:0; padding:20px 5px; color:white;">Copyright &copy; 2015 Roostr Inc. - All Rights Reserved</p>
                     </div>
                     <div class="col-sm-2"></div>
                 </div>
@@ -425,6 +411,17 @@
 
     </script>
 
+    <script>
+
+        $('form').validator().on('submit', function (e) {
+          if (e.isDefaultPrevented()) {
+            // handle the invalid form...
+          } else {
+            //continue bout yo bizness
+          }
+        });
+
+    </script>
 
 </body>
 
