@@ -109,7 +109,9 @@
 }
 
 p.lead {
-	padding: 60px 60px;
+	padding: 30px 60px;
+	margin:0;
+	margin-top:26px;
 }
 
 .featurette-img {
@@ -137,10 +139,14 @@ p.lead {
 	box-shadow: none;
 }
 
-@media screen and (max-width: 480px) {
-	#formlabels {
-		padding:5px;	
-	}
+input.form-control, input.form-control:focus {
+    border:none;
+    box-shadow: none;
+    border-radius:0;
+}
+
+.modal-body {
+	padding:20px;
 }
 
 @media screen 
@@ -153,6 +159,18 @@ and (max-width: 992px) {
 	.jumbotron h1 {
 		line-height: 1.4;
 		font-size: 30px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	
+	.navbar-right .dropdown-menu {
+		background: none;
+	}
+
+	p.lead {
+		padding: 30px 15px;
+		margin-top:0px;
 	}
 }
 
@@ -177,6 +195,7 @@ and (max-width: 992px) {
 
 	p.lead {
 		padding: 30px 15px;
+		margin:0;
 	}
 
 	.navbar-brand>img {
@@ -187,6 +206,18 @@ and (max-width: 992px) {
 		padding: 10px 50px;
 	}
 
+	#formlabels {
+		padding: 8px;
+	}
+
+	.modal-body {
+	  padding: 12px;
+	  padding-top: 0px;
+	}
+
+	footer>div>h2 {
+		font-size:22px;
+	}
 }
 
 /*@media screen and (max-width: 767px) {

@@ -1,3 +1,50 @@
+<?php
+
+require('connect.php');
+
+$fullname = $_POST['full_name_C'];
+$channelURL = $_POST['channel_URL_C'];
+$email = $_POST['email_C'];
+$time = time();
+
+$sql = "INSERT INTO creators VALUES('', '$fullname', '$channelURL', '$email', '$time')";
+
+if (!mysql_query($sql)) {
+  die('error inserting into db: ' . mysql_error());
+}
+
+mysql_close();
+
+if(!isset($_POST['submit']))
+{
+  //This page should not be accessed directly. Need to submit the form.
+  echo "error; you need to submit the form!";
+}
+$fullname = $_POST['full_name_C'];
+$channelURL = $_POST['channel_URL_C'];
+$email = $_POST['email_C'];
+
+//Validate first
+if(empty($fullname)|| empty($channelURL) || empty($email)) 
+{
+    echo "All fields are mandatory!";
+    exit;
+}
+
+$email_to = $email;
+$email_from = 'automatedtest@roostr.tv';//<== update the email address
+$email_subject = "Creator";
+$email_body = "You have received a new message from the user $fullname.\n Here is the message:\n $channelURL \n".
+    
+$headers = "From: $email_from \r\n";
+$headers .= "Reply-To: $channelURL \r\n";
+//Send the email!
+mail($email_to,$email_subject,$email_body,$headers);
+
+header( "refresh:3;url=index.html" );
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -175,13 +222,13 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/games.html">GAMES</a></li>
-            <li><a href="/creators.html">CREATORS</a></li>
+            <li><a href="#">GAMES</a></li>
+            <li><a href="#">CREATORS</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">JOIN</span></a>
               <ul class="dropdown-menu"><br>
-                <li><a href="#" data-toggle="modal" data-target="#myModal">Video Creator</a></li>
-                <li><a href="#" data-toggle="modal" data-target="#myModal2">Game Maker</a></li>
+                <li><a href="#">Video Creator</a></li>
+                <li><a href="#">Game Maker</a></li>
               </ul>
             </li>
           </ul>
@@ -192,40 +239,23 @@
     <div class="container">
 
       <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal fade" id="ThankYou" role="dialog">
         <div class="modal-dialog">
         
           <!-- Modal content-->
           <div class="modal-content">
 
             <div class="modal-header">
-                <a class="close" data-dismiss="modal">&times;</a>
                 <img src="/images/roostr_logo_white.png" alt="" />
             </div>
 
             <div class="modal-body">
-                <div id="form-wrapper">
-                  <form class="form form-inline form-horizontal" role="form" data-toggle="validator" method="post" action="form-to-db_C.php">
-                    <div class="form-group col-xs-12" style="padding-top:15px;">
-                       <img src="/images/icon_name.png" alt="" id="formlabels" class="col-xs-2" />  
-                       <input type="text" class="form-control col-xs-10" name="full_name_C" placeholder="Full Name" required>
-                    </div>
-                    <div class="form-group col-xs-12">
-                      <img src="/images/icon_video.png" alt="" id="formlabels" class="col-xs-2" />  
-                      <input type="url" class="form-control col-xs-10" name="channel_URL_C" placeholder="Channel URL" required>
-                    </div>
-                    <div class="form-group col-xs-12">
-                      <img src="/images/icon_email.png" alt="" id="formlabels" class="col-xs-2" />  
-                      <input type="email" class="form-control col-xs-10" name="email_C" placeholder="Email" required>
-                    </div>
-                    <div class="form-submit-btn">
-                        <input type="submit" name="submit" value="Sign Up" class="btn btn-modal" />
-                    </div>
-                  </form>
-                </div>
+              <h2 style="color:white">Thank you for signing up!</h2>
+                   <br>
+              <h3 style="color:white">An email will arrive in your inbox shortly.</h3>
             </div>
 
-            <div class="modal-footer">
+            <div class="modal-footer" style="padding:40px;">
             </div>
 
           </div> <!-- end Modal content -->
@@ -233,54 +263,7 @@
         </div>
       </div> <!-- End Modal -->
       
-    </div>
-
-    <div class="container">
-
-     <!-- Modal -->
-      <div class="modal fade" id="myModal2" role="dialog">
-        <div class="modal-dialog">
-        
-          <!-- Modal content-->
-          <div class="modal-content">
-
-            <div class="modal-header">
-                <a class="close" data-dismiss="modal">&times;</a>
-                <img src="/images/roostr_logo_white.png" alt="" />
-            </div>
-
-            <div class="modal-body">
-                <div id="form-wrapper">
-                  <form class="form form-inline form-horizontal" role="form" data-toggle="validator" method="post" action="form-to-db_G.php">
-                    <div class="form-group col-xs-12" style="padding-top:15px;">
-                       <img src="/images/icon_name.png" alt="" id="formlabels" class="col-xs-2" />  
-                       <input type="text" class="form-control col-xs-10" name="full_name_G" placeholder="Full Name" required>
-                    </div>
-                    <div class="form-group col-xs-12">
-                      <img src="/images/icon_company.png" alt="" id="formlabels" class="col-xs-2" />  
-                      <input type="text" class="form-control col-xs-10" name="company_G" placeholder="Company" required>
-                    </div>
-                    <div class="form-group col-xs-12">
-                      <img src="/images/icon_email.png" alt="" id="formlabels" class="col-xs-2" />  
-                      <input type="email" class="form-control col-xs-10" name="email_G" placeholder="Email" required>
-                    </div>
-                    <div class="form-submit-btn">
-                        <input type="submit" name="submit" value="Sign Up" class="btn btn-modal" />
-                    </div>
-                  </form>
-                </div>
-            </div>
-
-            <div class="modal-footer">
-            </div>
-
-          </div> <!-- end Modal content -->
-          
-        </div>
-      </div> <!-- End Modal -->
-      
-    </div>
-            
+    </div>           
 
     <!-- Full Width Image Header -->
         <div class="container">
@@ -341,8 +324,11 @@
 
     <script>
 
-        $('#myModal #myModal2').modal({
-          backdrop: static
+        $( document ).ready(function () {
+            $('#ThankYou').modal({
+              show: 'true',
+              backdrop: 'static'
+            });
         });
 
         $('form').validator().on('submit', function (e) {

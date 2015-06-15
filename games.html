@@ -6,10 +6,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Roostr | Performance Influencer Marketing - Drive direct mobile game installs with youtube and twitch">
     <meta name="author" content="">
 
     <title>Roostr</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +48,7 @@
         }
 
         .header-image {
-            background-image: url('images/controller.jpg');
+            background-image: url('images/games.jpg');
             background-size:cover;
             width:100%;
             height:100%;
@@ -76,10 +80,6 @@
             background: url('/images/sign_up_box.png');
             background-size: cover;
             text-align: center;
-        }
-
-        .modal-body {
-            padding:20px;
         }
 
             #form-wrapper {
@@ -187,7 +187,7 @@
 
             <div class="modal-body">
                 <div id="form-wrapper">
-                  <form class="form form-inline form-horizontal" role="form" data-toggle="validator">
+                  <form class="form form-inline form-horizontal" role="form" data-toggle="validator" method="post" action="form-to-db_C.php">
                     <div class="form-group col-xs-12" style="padding-top:15px;">
                        <img src="/images/icon_name.png" alt="" id="formlabels" class="col-xs-2" />  
                        <input type="text" class="form-control col-xs-10" name="full_name_C" placeholder="Full Name" required>
@@ -201,7 +201,7 @@
                       <input type="email" class="form-control col-xs-10" name="email_C" placeholder="Email" required>
                     </div>
                     <div class="form-submit-btn">
-                        <input type="submit" name='submit' value="Sign Up" class="btn btn-modal" />
+                        <input type="submit" name="submit" value="Sign Up" class="btn btn-modal" />
                     </div>
                   </form>
                 </div>
@@ -233,7 +233,7 @@
 
             <div class="modal-body">
                 <div id="form-wrapper">
-                  <form class="form form-inline form-horizontal" role="form" data-toggle="validator">
+                  <form class="form form-inline form-horizontal" role="form" data-toggle="validator" method="post" action="form-to-db_G.php">
                     <div class="form-group col-xs-12" style="padding-top:15px;">
                        <img src="/images/icon_name.png" alt="" id="formlabels" class="col-xs-2" />  
                        <input type="text" class="form-control col-xs-10" name="full_name_G" placeholder="Full Name" required>
@@ -247,7 +247,7 @@
                       <input type="email" class="form-control col-xs-10" name="email_G" placeholder="Email" required>
                     </div>
                     <div class="form-submit-btn">
-                        <input type="submit" name='submit' value="Sign Up" class="btn btn-modal" />
+                        <input type="submit" name="submit" value="Sign Up" class="btn btn-modal" />
                     </div>
                   </form>
                 </div>
@@ -266,7 +266,7 @@
     <!-- Full Width Image Header -->
     <div class="header-image">
         <div class="header-img-overlay">
-            <div class="container">
+            <div class="container" style="height:500px;">
                 <div class="jumbotron" style="background:none; color: white; margin-top:40px;">
                     <p style="font-size:40px; margin-top:20px;">What is <span style="font-size: 48px; font-family:'Chunk Five'">roostr </span>?</p>
                     <h3>Roostr is a new way to drive direct installs<br>
@@ -341,7 +341,7 @@
     <!-- Footer -->
     <footer>
         <div style="padding:0; margin:0; background-color:#E84555; width:100%; text-align:center;">
-            <h2 style="margin:0; padding-top:40px; padding-bottom:30px; color:white;">
+            <h2 style="margin:0; padding-top:40px; color:white;">
                 Discover and hire YouTube and Twitch<br>
                 Influencers to make native content<br>
                 that brings engaged, loyal players<br>
