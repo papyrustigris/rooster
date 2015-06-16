@@ -31,10 +31,10 @@ if(empty($fullname)|| empty($channelURL) || empty($email))
     exit;
 }
 
-$email_to = $email;
+$email_to = $email.", "."matt.elia@gramercytech.com";
 $email_from = 'automatedtest@roostr.tv';//<== update the email address
-$email_subject = "Creator";
-$email_body = "You have received a new message from the user $fullname.\n Here is the message:\n $channelURL \n".
+$email_subject = "Thanks for your interest in Roostr!";
+$email_body = "Thanks for signing up to learn more about Roostr. We're looking forward to talking more and will be in touch with you shortly! \n\n - Team Roostr".
     
 $headers = "From: $email_from \r\n";
 $headers .= "Reply-To: $channelURL \r\n";

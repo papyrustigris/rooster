@@ -127,6 +127,7 @@ p.lead {
     margin:15px 15px;
     padding: 10px 100px;
     max-width: 100%;
+    white-space: normal;
 }
 .btn-modal:hover{color:white;}
 .btn-modal:active {
