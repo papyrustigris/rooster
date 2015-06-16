@@ -20,9 +20,6 @@ if(!isset($_POST['submit']))
   //This page should not be accessed directly. Need to submit the form.
   echo "error; you need to submit the form!";
 }
-$fullname = $_POST['full_name_C'];
-$channelURL = $_POST['channel_URL_C'];
-$email = $_POST['email_C'];
 
 //Validate first
 if(empty($fullname)|| empty($channelURL) || empty($email)) 
@@ -31,13 +28,13 @@ if(empty($fullname)|| empty($channelURL) || empty($email))
     exit;
 }
 
-$email_to = $email.", "."matt.elia@gramercytech.com";
-$email_from = 'automatedtest@roostr.tv';//<== update the email address
+$email_to = $email;
+$email_from = 'automated-test@roostr.tv';//<== update the email address
 $email_subject = "Thanks for your interest in Roostr!";
-$email_body = "Thanks for signing up to learn more about Roostr. We're looking forward to talking more and will be in touch with you shortly! \n\n - Team Roostr".
-    
-$headers = "From: $email_from \r\n";
-$headers .= "Reply-To: $channelURL \r\n";
+$email_body = "Thanks for signing up to learn more about Roostr. We're looking forward to talking more and will be in touch with you shortly! \n\n - Team Roostr";
+
+$headers = "CC: mattelia187@gmail.com \r\n";
+$headers .= "From: $email_from \r\n";
 //Send the email!
 mail($email_to,$email_subject,$email_body,$headers);
 
